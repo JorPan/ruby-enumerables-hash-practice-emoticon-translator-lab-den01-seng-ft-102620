@@ -15,6 +15,7 @@ def load_library(path)
 
 
 def get_english_meaning(path, emoticon)
+  result = 
   library = load_library(path)
   library.each do |meaning, emoticons|
     if emoticon == emoticons[:japanese]
@@ -27,9 +28,8 @@ end
 def get_japanese_emoticon(path, emoticon)
   library = load_library(path)
   library.each do |meaning, emoticons|
- #  binding.pry
     if emoticon == emoticons[:english]
-      return [emoticons][:japanese]
+      return emoticons[:japanese]
   end
 end
     return "Sorry, that emoticon was not found"
